@@ -8,9 +8,9 @@ const FoodItem = ({ id, name, price, image, description }) => {
 
   return (
     <div className="mb-3">
-      <div className="card card-compact bg-base-100 w-96 shadow-xl">
+      <div className="card card-compact bg-gray-200 shadow-xl">
         <div className="relative">
-          <img className="p-4" src={image} alt="food item" />
+          <img className="p-7 lg:p-4" src={image} alt="food item" />
           {!cartItem[id] ? (
             <img  
               className="absolute bottom-5 right-5 w-10 cursor-pointer"
