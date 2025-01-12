@@ -3,7 +3,7 @@ import { menu_list } from "../../assets/assets";
 
 const ExploreMenu = ({ category, setCategory }) => {
   return (
-    <div className="mt-10 text-center">
+    <div className="mt-10 text-center" id="menu-item">
       <h1 className="text-3xl font-semibold">Explore Menu</h1>
       <p>Choose your desire food from our menu</p>
       <div className="flex gap-8 justify-center mt-5 overflow-x-auto overflow-hidden">

@@ -1,13 +1,16 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/platerushlogo.png';
+import { useState } from 'react';
 
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
+
+
   const navlink = <>
   <li><Link>Home</Link></li>
-  <li><Link>Items</Link></li>
-  <li><Link>Services</Link></li>
-  <li><Link>Contact Us</Link></li>
+  <li><a href='#menu-item'>Menu</a></li>
+  <li><a href='#contact'>Services</a></li>
+  <li><a href='#footer'>Contact Us</a></li>
   </>
   return (
     <div>
@@ -35,7 +38,7 @@ const Navbar = () => {
         
       </ul>
     </div>
-    <img className='w-10' src={logo} alt="" />
+    <img className='w-10 ml-10' src={logo} alt="" />
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -43,8 +46,10 @@ const Navbar = () => {
       {navlink}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn bg-green-500 rounded-xl text-white font-semibold">Sign In</a>
+  <div className="navbar-end mr-10">
+    <a className="btn bg-green-500 rounded-xl text-white font-semibold"
+      onClick={()=>setShowLogin(true)}
+    >Sign In</a>
   </div>
 </div>
     </div>
